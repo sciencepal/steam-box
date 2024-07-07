@@ -55,7 +55,7 @@ func (b *Box) UpdateGist(ctx context.Context, id string, gist *github.Gist) erro
 // GetPlayTime gets the top 5 Steam games played in descending order from the Steam API.
 func (b *Box) GetPlayTime(ctx context.Context, steamID uint64, multiLined bool, appID ...uint32) ([]string, error) {
 	params := &steam.GetOwnedGamesParams{
-		SteamID:                steamID,
+		steamID:                steamID,
 		IncludeAppInfo:         true,
 		IncludePlayedFreeGames: true,
 	}
